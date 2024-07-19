@@ -5,5 +5,8 @@ node_modules/
 .vscode
 .DS_Store
 
-cypress/snapshots
+/.cache/**
 /cypress/downloads
+/cypress/snapshots
+/cypress/videos
+cypress/report

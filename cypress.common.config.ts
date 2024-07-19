@@ -8,6 +8,9 @@ const cypressCommonConfig: Cypress.ConfigOptions = {
   viewportHeight: 720,
   viewportWidth: 1280,
   video: false,
+  screenshotOnRunFailure: true,
+  screenshotsFolder: "cypress/screenshots",
+  videosFolder: "cypress/videos",
   e2e: {
     screenshotsFolder: './cypress/snapshots/actual',
     setupNodeEvents(on: Cypress.PluginEvents, config: Cypress.PluginConfigOptions) {

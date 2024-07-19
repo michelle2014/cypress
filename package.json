@@ -10,19 +10,25 @@
     "cy:base-and-regression": "npm run cy:base && npm run cy:regression",
     "cy:open:base": "visual_regression_log=debug cypress open --e2e -b chrome -C cypress.base.config.ts",
     "cy:open:regression": "visual_regression_log=debug cypress open --e2e -b chrome -C cypress.regression.config.ts",
-    "cy:base": "cypress run -b chrome -C cypress.base.config.ts",
-    "cy:regression": "cypress run -b chrome -C cypress.regression.config.ts"
+    "cy:base": "cypress run -C cypress.base.config.ts",
+    "cy:regression": "cypress run -C cypress.regression.config.ts"
   },
   "author": "Michelle",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^13.13.0"
+    "cypress": "^13.13.0",
+    "cypress-multi-reporters": "^1.5.0",
+    "mocha-junit-reporter": "^2.2.1",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0"
   },
   "dependencies": {
     "@faker-js/faker": "8.0.2",
     "cypress-visual-regression": "^5.0.2",
     "@cypress/webpack-preprocessor": "^6.0.2",
     "typescript": "5.2.2",
-    "ts-loader": "^9.5.1"
+    "ts-loader": "^9.5.1",
+    "mocha": "^10.6.0"
   }
 }

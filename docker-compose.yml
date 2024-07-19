@@ -1,0 +1,18 @@
+version: '3.9'
+services:
+  local: &local
+    build:
+      context: .
+    volumes:
+      - .:/e2e
+      - .cache:/home/node/.cache
+    ipc: host
+    env_file:
+      - .env
+
+  jenkins:
+    <<: *local
+    volumes:
+      - ./report:/e2e/cypress/report
+      - ./screenshots:/e2e/cypress/screenshots
+      - ./videos:/e2e/cypress/videos
