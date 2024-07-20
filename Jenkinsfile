@@ -1,7 +1,5 @@
 pipeline {
-  agent {
-    label 'jenkins-worker-ondemand'
-  }
+  agent any
 
   stages {
     stage('build') {
